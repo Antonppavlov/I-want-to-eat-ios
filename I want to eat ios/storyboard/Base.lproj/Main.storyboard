@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fGl-4v-m9U">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start View Contoller-->
+        <scene sceneID="O2P-hX-NeO">
+            <objects>
+                <viewController id="fGl-4v-m9U" customClass="StartViewContoller" customModule="I_want_to_eat_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cj8-5o-dO3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2z-k7-ZPu">
+                                <rect key="frame" x="20" y="40" width="335" height="607"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Начать"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y2z-k7-ZPu" firstAttribute="leading" secondItem="jy4-a7-cvq" secondAttribute="leading" constant="20" id="4mm-ol-vGA"/>
+                            <constraint firstItem="Y2z-k7-ZPu" firstAttribute="top" secondItem="jy4-a7-cvq" secondAttribute="top" constant="20" id="Lbv-2O-RA7"/>
+                            <constraint firstItem="jy4-a7-cvq" firstAttribute="bottom" secondItem="Y2z-k7-ZPu" secondAttribute="bottom" constant="20" id="NSL-FN-nbo"/>
+                            <constraint firstItem="jy4-a7-cvq" firstAttribute="trailing" secondItem="Y2z-k7-ZPu" secondAttribute="trailing" constant="20" id="mps-Fx-5Ib"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jy4-a7-cvq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pOr-lt-Q3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-924" y="286"/>
+        </scene>
+    </scenes>
+</document>
