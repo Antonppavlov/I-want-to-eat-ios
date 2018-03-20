@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		12A7E8E7205FF5AE00C698BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7E8E6205FF5AE00C698BB /* AppDelegate.swift */; };
 		12A7E8E9205FF5AE00C698BB /* StartViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7E8E8205FF5AE00C698BB /* StartViewContoller.swift */; };
-		12A7E8EC205FF5AE00C698BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A7E8EA205FF5AE00C698BB /* Main.storyboard */; };
+		12A7E8EC205FF5AE00C698BB /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A7E8EA205FF5AE00C698BB /* Start.storyboard */; };
 		12A7E8EE205FF5AE00C698BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12A7E8ED205FF5AE00C698BB /* Assets.xcassets */; };
 		12A7E8F1205FF5AE00C698BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A7E8EF205FF5AE00C698BB /* LaunchScreen.storyboard */; };
 		12C4B5C1206007BE00C9D093 /* ChooseGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C4B5C0206007BE00C9D093 /* ChooseGenderViewController.swift */; };
@@ -24,7 +24,7 @@
 		12A7E8E3205FF5AE00C698BB /* I want to eat ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I want to eat ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12A7E8E6205FF5AE00C698BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12A7E8E8205FF5AE00C698BB /* StartViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewContoller.swift; sourceTree = "<group>"; };
-		12A7E8EB205FF5AE00C698BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		12A7E8EB205FF5AE00C698BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Start.storyboard; sourceTree = "<group>"; };
 		12A7E8ED205FF5AE00C698BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12A7E8F0205FF5AE00C698BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12A7E8F2205FF5AE00C698BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				12A7E8EF205FF5AE00C698BB /* LaunchScreen.storyboard */,
-				12A7E8EA205FF5AE00C698BB /* Main.storyboard */,
+				12A7E8EA205FF5AE00C698BB /* Start.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -167,7 +167,7 @@
 			files = (
 				12A7E8F1205FF5AE00C698BB /* LaunchScreen.storyboard in Resources */,
 				12A7E8EE205FF5AE00C698BB /* Assets.xcassets in Resources */,
-				12A7E8EC205FF5AE00C698BB /* Main.storyboard in Resources */,
+				12A7E8EC205FF5AE00C698BB /* Start.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,12 +192,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		12A7E8EA205FF5AE00C698BB /* Main.storyboard */ = {
+		12A7E8EA205FF5AE00C698BB /* Start.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				12A7E8EB205FF5AE00C698BB /* Base */,
 			);
-			name = Main.storyboard;
+			name = Start.storyboard;
 			sourceTree = "<group>";
 		};
 		12A7E8EF205FF5AE00C698BB /* LaunchScreen.storyboard */ = {
@@ -323,6 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W76ZQSY64Q;
 				INFOPLIST_FILE = "I want to eat ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.appavlov.I-want-to-eat-ios";
@@ -337,6 +338,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W76ZQSY64Q;
 				INFOPLIST_FILE = "I want to eat ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.appavlov.I-want-to-eat-ios";
