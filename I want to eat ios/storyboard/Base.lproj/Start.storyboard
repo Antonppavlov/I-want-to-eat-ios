@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fGl-4v-m9U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fGl-4v-m9U">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -69,6 +69,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Мужчина"/>
                                 <connections>
+                                    <action selector="clickButtonMan:" destination="Rko-Sz-xnC" eventType="touchUpInside" id="MRI-EV-eDp"/>
                                     <segue destination="ond-C1-J9o" kind="show" id="PSQ-PA-to4"/>
                                 </connections>
                             </button>
@@ -79,6 +80,7 @@
                                     <color key="titleShadowColor" red="0.9769166283216022" green="1" blue="0.9767670610721475" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="clickButtonWoman:" destination="Rko-Sz-xnC" eventType="touchUpInside" id="bti-QK-hOT"/>
                                     <segue destination="ond-C1-J9o" kind="show" id="k4w-vO-Ech"/>
                                 </connections>
                             </button>
@@ -156,7 +158,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Далее"/>
                                 <connections>
-                                    <segue destination="yLU-gh-Ev5" kind="show" id="7kI-7D-3Ky"/>
+                                    <action selector="clickButtonNext:" destination="ond-C1-J9o" eventType="touchUpInside" id="CWq-lc-bSg"/>
+                                    <segue destination="yLU-gh-Ev5" kind="show" id="Izi-JN-VI7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -182,6 +185,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="74c-3h-fkb"/>
                     </view>
+                    <connections>
+                        <outlet property="inputAge" destination="8Z7-at-lPU" id="T7b-CZ-4kc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NqH-Fx-De7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -227,7 +233,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Далее"/>
                                 <connections>
-                                    <segue destination="FJq-Od-dU4" kind="show" id="rRU-aK-K3r"/>
+                                    <action selector="clickButtonNext:" destination="yLU-gh-Ev5" eventType="touchUpInside" id="EVy-65-3oX"/>
+                                    <segue destination="FJq-Od-dU4" kind="show" id="nBZ-WE-5Nj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -255,6 +262,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iax-FH-GlQ"/>
                     </view>
+                    <connections>
+                        <outlet property="inputHeight" destination="Ne1-6E-KpL" id="16X-IM-YfX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bF4-5y-8mT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -300,7 +310,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Далее"/>
                                 <connections>
-                                    <segue destination="sXM-6z-HZy" kind="show" id="Ge9-yO-qnr"/>
+                                    <segue destination="sXM-6z-HZy" kind="show" id="JbB-po-M65"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -328,6 +338,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kxu-cO-ZX5"/>
                     </view>
+                    <connections>
+                        <outlet property="clickButtonNext" destination="rQS-4i-35N" id="Wmb-zI-C37"/>
+                        <outlet property="inputWeight" destination="n0p-d2-vhl" id="xnT-pt-2cP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HL6-tt-JyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -400,6 +414,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hEY-uB-BFy"/>
                     </view>
+                    <connections>
+                        <outlet property="clickButtonNext" destination="pKM-tr-i1m" id="DaY-04-qob"/>
+                        <outlet property="inputTargetWeight" destination="2TR-gp-vva" id="ZlL-Wh-Mso"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obp-7F-5S5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -417,6 +435,9 @@
                                 <rect key="frame" x="20" y="324" width="335" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="В приложение"/>
+                                <connections>
+                                    <segue destination="hZx-Vh-01E" kind="show" id="stc-nU-gkt"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Финал" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2i-f9-XNf">
                                 <rect key="frame" x="20" y="40" width="335" height="21"/>
@@ -462,6 +483,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GbE-8q-pPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2516" y="221.73913043478262"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="fZy-hh-2ML">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="hZx-Vh-01E" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p2u-Mj-DHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3222" y="221"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
