@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 storage.isTargetWeightExist() &&
                 storage.isActivityExist()
             ) {
-            rootVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController")
+            rootVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController")
         } else {
             rootVC = UIStoryboard.init(name: "Start", bundle: nil).instantiateViewController(withIdentifier: "StartViewContoller")
         }

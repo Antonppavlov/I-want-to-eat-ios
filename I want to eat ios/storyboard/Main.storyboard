@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nAh-vt-5ih">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nAh-vt-5ih">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +40,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рост:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZS3-Gd-JVv">
                                 <rect key="frame" x="20" y="140" width="55" height="30"/>
@@ -58,7 +58,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вес:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mc-ZS-EtA">
                                 <rect key="frame" x="20" y="190" width="45.5" height="30"/>
@@ -76,7 +76,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Активность:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibE-OE-hqZ">
                                 <rect key="frame" x="20" y="240" width="127" height="30"/>
@@ -94,7 +94,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цель вес:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7FY-Xs-N4z" userLabel="Цель вес:">
                                 <rect key="frame" x="20" y="290" width="100.5" height="30"/>
@@ -112,7 +112,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пол:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuL-B4-5uX">
                                 <rect key="frame" x="20" y="339" width="47.5" height="30"/>
@@ -124,7 +124,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zhr-b5-mrj">
-                                <rect key="frame" x="210" y="340" width="145" height="29"/>
+                                <rect key="frame" x="208" y="340" width="147" height="29"/>
                                 <segments>
                                     <segment title="Женский"/>
                                     <segment title="Мужской"/>
@@ -176,7 +176,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aON-tI-che"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Настройки" id="n5s-6l-AnE"/>
+                    <tabBarItem key="tabBarItem" title="Настройки" image="settings" selectedImage="settings" id="n5s-6l-AnE"/>
                     <connections>
                         <outlet property="inputActivity" destination="vvS-xO-Pet" id="1re-kG-7K0"/>
                         <outlet property="inputAge" destination="m1m-7x-hWp" id="viK-kB-kcT"/>
@@ -200,7 +200,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YKA-s6-ZEP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Корзина" id="4mk-0R-d22"/>
+                    <tabBarItem key="tabBarItem" title="Корзина" image="product_basket" selectedImage="product_basket" id="4mk-0R-d22"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fB0-qq-L9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -217,7 +217,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tfb-d2-9TO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Рацион" id="4ck-dg-1Sp"/>
+                    <tabBarItem key="tabBarItem" title="Рацион" image="foods" selectedImage="foods" id="4ck-dg-1Sp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wt-9j-R8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -226,7 +226,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="IuA-Ow-nMB">
             <objects>
-                <tabBarController id="nAh-vt-5ih" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="nAh-vt-5ih" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gBz-GT-VES">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -243,4 +243,9 @@
             <point key="canvasLocation" x="-3375" y="-233"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="foods" width="30" height="30"/>
+        <image name="product_basket" width="30" height="30"/>
+        <image name="settings" width="30" height="30"/>
+    </resources>
 </document>
