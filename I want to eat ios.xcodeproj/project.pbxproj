@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		124063C220AC0CD600C98E3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124063C120AC0CD600C98E3E /* Main.storyboard */; };
 		124063C620AC0D9700C98E3E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124063C520AC0D9700C98E3E /* SettingsViewController.swift */; };
+		1242370A20D0096000EFBA79 /* KeyboardCloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1242370920D0096000EFBA79 /* KeyboardCloseViewController.swift */; };
 		129F05D620BC992200C4F4CB /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129F05D520BC992200C4F4CB /* UserStorage.swift */; };
 		12A7E8E7205FF5AE00C698BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7E8E6205FF5AE00C698BB /* AppDelegate.swift */; };
 		12A7E8E9205FF5AE00C698BB /* StartViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7E8E8205FF5AE00C698BB /* StartViewContoller.swift */; };
@@ -21,11 +22,13 @@
 		12C4B5C72060086100C9D093 /* IndicateWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C4B5C62060086100C9D093 /* IndicateWeightViewController.swift */; };
 		12C4B5C920600B6600C9D093 /* IndicateDesiredWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C4B5C820600B6600C9D093 /* IndicateDesiredWeightViewController.swift */; };
 		12C4B5CB20600BD200C9D093 /* NowYouCanUseAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C4B5CA20600BD200C9D093 /* NowYouCanUseAppViewController.swift */; };
+		12EFBF9220D04EFC008BD2B0 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFBF9120D04EFC008BD2B0 /* ActivityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		124063C120AC0CD600C98E3E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		124063C520AC0D9700C98E3E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = main/SettingsViewController.swift; sourceTree = "<group>"; };
+		124063C520AC0D9700C98E3E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1242370920D0096000EFBA79 /* KeyboardCloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCloseViewController.swift; sourceTree = "<group>"; };
 		129F05D520BC992200C4F4CB /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		12A7E8E3205FF5AE00C698BB /* I want to eat ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I want to eat ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12A7E8E6205FF5AE00C698BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		12C4B5C62060086100C9D093 /* IndicateWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicateWeightViewController.swift; sourceTree = "<group>"; };
 		12C4B5C820600B6600C9D093 /* IndicateDesiredWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicateDesiredWeightViewController.swift; sourceTree = "<group>"; };
 		12C4B5CA20600BD200C9D093 /* NowYouCanUseAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowYouCanUseAppViewController.swift; sourceTree = "<group>"; };
+		12EFBF9120D04EFC008BD2B0 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		124063C420AC0D8300C98E3E /* main */ = {
 			isa = PBXGroup;
 			children = (
+				124063C520AC0D9700C98E3E /* SettingsViewController.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -102,7 +107,7 @@
 				129F05D020BC943000C4F4CB /* utils */,
 				124063C420AC0D8300C98E3E /* main */,
 				12C4B5CC20600BDE00C9D093 /* start */,
-				124063C520AC0D9700C98E3E /* SettingsViewController.swift */,
+				1242370920D0096000EFBA79 /* KeyboardCloseViewController.swift */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 				12C4B5C62060086100C9D093 /* IndicateWeightViewController.swift */,
 				12C4B5C820600B6600C9D093 /* IndicateDesiredWeightViewController.swift */,
 				12C4B5CA20600BD200C9D093 /* NowYouCanUseAppViewController.swift */,
+				12EFBF9120D04EFC008BD2B0 /* ActivityViewController.swift */,
 			);
 			path = start;
 			sourceTree = "<group>";
@@ -163,6 +169,7 @@
 				TargetAttributes = {
 					12A7E8E2205FF5AE00C698BB = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -210,6 +217,8 @@
 				12A7E8E7205FF5AE00C698BB /* AppDelegate.swift in Sources */,
 				129F05D620BC992200C4F4CB /* UserStorage.swift in Sources */,
 				12C4B5C920600B6600C9D093 /* IndicateDesiredWeightViewController.swift in Sources */,
+				1242370A20D0096000EFBA79 /* KeyboardCloseViewController.swift in Sources */,
+				12EFBF9220D04EFC008BD2B0 /* ActivityViewController.swift in Sources */,
 				12C4B5C1206007BE00C9D093 /* ChooseGenderViewController.swift in Sources */,
 				12C4B5CB20600BD200C9D093 /* NowYouCanUseAppViewController.swift in Sources */,
 				12C4B5C32060081000C9D093 /* IndicateAgeViewController.swift in Sources */,
@@ -360,7 +369,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.appavlov.I-want-to-eat-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -375,7 +384,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.appavlov.I-want-to-eat-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

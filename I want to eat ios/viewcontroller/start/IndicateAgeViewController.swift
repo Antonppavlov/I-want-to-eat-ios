@@ -8,14 +8,29 @@
 
 import UIKit
 
-class IndicateAgeViewController: UIViewController {
+class IndicateAgeViewController: KeyboardCloseViewController {
+    
+    let storage = UserStorage()
     
     @IBOutlet weak var inputAge: UITextField!
+    @IBOutlet weak var buttonNext: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        buttonNext.isEnabled = false
+    }
+    
+    @IBAction func editingTextInput(_ sender: Any) {
+        buttonNext.isEnabled = inputAge.text != ""
     }
     
     @IBAction func clickButtonNext(_ sender: Any) {
+        print(inputAge.text!)
+        storage.saveAge(age: inputAge.text!)
     }
+    
+    
 }
+
+
+

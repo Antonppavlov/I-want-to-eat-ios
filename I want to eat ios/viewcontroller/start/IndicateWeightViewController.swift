@@ -8,12 +8,24 @@
 
 import UIKit
 
-class IndicateWeightViewController: UIViewController {
+class IndicateWeightViewController: KeyboardCloseViewController {
+    
+    let storage = UserStorage()
     
     @IBOutlet weak var inputWeight: UITextField!
+    @IBOutlet weak var buttonNext: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        buttonNext.isEnabled = false
     }
     
-    @IBOutlet weak var clickButtonNext: UIButton!
+    @IBAction func editingTextInput(_ sender: Any) {
+        buttonNext.isEnabled = inputWeight.text != ""
+    }
+    @IBAction func clickButtonNext(_ sender: Any) {
+        print(inputWeight.text!)
+        storage.saveWeight(weight: inputWeight.text!)
+    }
 }
+

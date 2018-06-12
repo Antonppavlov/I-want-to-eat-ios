@@ -10,14 +10,19 @@ import UIKit
 
 class ChooseGenderViewController: UIViewController {
     
+    let storage = UserStorage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func clickButtonMan(_ sender: Any) {
-        UserStorage().saveGender(login: true)
+        storage.saveGender(gender: "1")
     }
     @IBAction func clickButtonWoman(_ sender: Any) {
-        UserStorage().saveGender(login: false)
+        storage.saveGender(gender: "0")
     }
 }
+
+
+
