@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12190C7C20D1A5280039E34E /* FoodIntakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12190C7B20D1A5280039E34E /* FoodIntakeViewController.swift */; };
 		124063C220AC0CD600C98E3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124063C120AC0CD600C98E3E /* Main.storyboard */; };
 		124063C620AC0D9700C98E3E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124063C520AC0D9700C98E3E /* SettingsViewController.swift */; };
 		1242370A20D0096000EFBA79 /* KeyboardCloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1242370920D0096000EFBA79 /* KeyboardCloseViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12190C7B20D1A5280039E34E /* FoodIntakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodIntakeViewController.swift; sourceTree = "<group>"; };
 		124063C120AC0CD600C98E3E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		124063C520AC0D9700C98E3E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1242370920D0096000EFBA79 /* KeyboardCloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCloseViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				124063C520AC0D9700C98E3E /* SettingsViewController.swift */,
 				124C647E20D16253006CDAB8 /* RationViewController.swift */,
+				12190C7B20D1A5280039E34E /* FoodIntakeViewController.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				124C647F20D16253006CDAB8 /* RationViewController.swift in Sources */,
+				12190C7C20D1A5280039E34E /* FoodIntakeViewController.swift in Sources */,
 				124C648120D1633A006CDAB8 /* MenuForTheDay.swift in Sources */,
 				12A7E8E9205FF5AE00C698BB /* StartViewContoller.swift in Sources */,
 				12C4B5C72060086100C9D093 /* IndicateWeightViewController.swift in Sources */,
