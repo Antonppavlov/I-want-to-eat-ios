@@ -12,6 +12,10 @@ class ActivityViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     
     @IBOutlet weak var pickerActivity: UIPickerView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     let activity = ["Минимальные нагрузки",
                     "Упражнения 1-3 раза в неделю",
                     "Тренировки 4-5 раз в неделю",
@@ -19,10 +23,6 @@ class ActivityViewController: UIViewController, UIPickerViewDataSource,UIPickerV
                     "Ежедневные тренировки",
                     "Тренировки 2 раза в день",
                     "Интенсивные тренировки 2 раза в день"]
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
        return 1

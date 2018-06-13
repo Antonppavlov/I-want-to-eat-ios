@@ -23,6 +23,7 @@ class IndicateWeightViewController: KeyboardCloseViewController {
     @IBAction func editingTextInput(_ sender: Any) {
         buttonNext.isEnabled = inputWeight.text != ""
     }
+    
     @IBAction func clickButtonNext(_ sender: Any) {
         print(inputWeight.text!)
         storage.saveWeight(weight: inputWeight.text!)
