@@ -8,9 +8,7 @@
 
 import UIKit
 
-class RationViewController: UIViewController
-    ,UITableViewDelegate, UITableViewDataSource
-{
+class RationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var foodIntakeTableView: UITableView!
     var menu:MenuForTheDay?
@@ -25,13 +23,14 @@ class RationViewController: UIViewController
     }
     
     func downloadJSON(completed:@escaping ()->())  {
+        
         let url = URL(string: "http://iwanttoeat.ddns.net:8080/menu?calorie=3000&proteins=111&fats=50&carbohydrates=333")
         
         URLSession.shared.dataTask(with: url!) { (data,respons,error) in
             
             if(error == nil){
                 do{
-            
+                    
                     self.menu = try JSONDecoder().decode(MenuForTheDay.self,from: data! )
                     DispatchQueue.main.async {
                         completed()
@@ -42,40 +41,48 @@ class RationViewController: UIViewController
             }
             
             }.resume()
+        
+        
     }
     
-        /////////////////
+    /////////////////
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(self.menu==nil){
-             return 5;
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            return 5;
         }else{
-           return self.menu!.foodIntakeList.count
+            return self.menu!.foodIntakeList.count
         }
-       
     }
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-      
+        
         if(menu==nil){
-              cell.textLabel?.text = "Загрузка..."
+            cell.textLabel?.text = "Загрузка..."
         }else{
             cell.textLabel?.text =  menu!.foodIntakeList[indexPath.row].name
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
+        
         return cell
     }
     
     
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            performSegue(withIdentifier: "showFoodIntake", sender: self)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showFoodIntake", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? FoodIntakeViewController{
+            destination.foodIntake = menu!.foodIntakeList[(foodIntakeTableView.indexPathForSelectedRow?.row)!]
         }
- 
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if let destination = segue.destination as? FoodIntakeViewController{
-                destination.foodIntake = menu!.foodIntakeList[(foodIntakeTableView.indexPathForSelectedRow?.row)!]
-            }
-        }
+    }
     /////////////////
 }
+
+
+
 
 
 

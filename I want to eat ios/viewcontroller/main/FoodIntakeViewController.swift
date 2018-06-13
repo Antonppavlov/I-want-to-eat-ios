@@ -15,18 +15,28 @@ class FoodIntakeViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.foodTableView.reloadData()
+        self.foodTableView.reloadData()
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return self.foodIntake!.foods.count
+        return self.foodIntake!.foods.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-         cell.textLabel?.text =  foodIntake!.foods[indexPath.row].name.nameRu
+        cell.textLabel?.text =  foodIntake!.foods[indexPath.row].name.nameRu
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showFood", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? FoodViewController{
+            destination.foodInDb = foodIntake!.foods[(foodTableView.indexPathForSelectedRow?.row)!]
+        }
+    }
 }
+

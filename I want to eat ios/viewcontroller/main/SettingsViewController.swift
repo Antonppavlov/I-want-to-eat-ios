@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsViewController: KeyboardCloseViewController, UIPickerViewDataSource,UIPickerViewDelegate {
+class SettingsViewController: KeyboardCloseViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     let storage = UserStorage()
     
     @IBOutlet weak var inputAge: UITextField!
