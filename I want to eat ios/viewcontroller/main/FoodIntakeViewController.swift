@@ -26,6 +26,7 @@ class FoodIntakeViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         cell.textLabel?.text =  foodIntake!.foods[indexPath.row].name.nameRu
+        cell.detailTextLabel?.text = foodIntake!.cpfc.calories.description
         return cell
     }
     

@@ -41,7 +41,7 @@ class FoodViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.textLabel?.text = product.product.name.nameRu.lowercased()
         
         if(product.value != nil){
-            cell.detailTextLabel?.text = Double(round(100*product.value!)/100).description
+            cell.detailTextLabel?.text = product.value.description
         }
         
         return cell

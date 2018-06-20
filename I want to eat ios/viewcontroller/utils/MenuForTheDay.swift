@@ -1,31 +1,26 @@
+// To parse the JSON, add this file to your project and do:
 //
-//  FoodIntake.swift
-//  I want to eat ios
-//
-//  Created by Anton Pavlov on 13.06.2018.
-//  Copyright © 2018 Anton Pavlov. All rights reserved.
-//
+//   let menuForTheDay = try? JSONDecoder().decode(MenuForTheDay.self, from: jsonData)
 
 import Foundation
 
 struct MenuForTheDay: Codable {
-    let caloriesDay: CaloriesDay
+    let cpfc: Cpfc
     let foodIntakeList: [FoodIntakeList]
 }
 
-struct CaloriesDay: Codable {
-    let calorie: Int?
-    let proteins, fats, carbohydrates: Double?
-    let calories: Double?
+struct Cpfc: Codable {
+    let calories, proteins, fats, carbohydrates: Double
 }
 
 struct FoodIntakeList: Codable {
-    let caloriesIntake: CaloriesDay
     let name: String
     let foods: [Food]
+    let cpfc: Cpfc
 }
 
 struct Food: Codable {
+    let id: Int
     let name, foodType, foodSubType: FoodSubType
     let recipe: Recipe
     let foodProducts: [FoodProduct]
@@ -33,12 +28,13 @@ struct Food: Codable {
 
 struct FoodProduct: Codable {
     let product: Product
-    let value: Double?
+    let value: Double
 }
 
 struct Product: Codable {
+    let id: Int
     let name, type: FoodSubType
-    let data: CaloriesDay
+    let data: Cpfc
 }
 
 struct FoodSubType: Codable {

@@ -24,7 +24,7 @@ class RationViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func downloadJSON(completed:@escaping ()->())  {
         
-        let url = URL(string: "http://iwanttoeat.ddns.net:8080/menu?calorie=3000&proteins=111&fats=50&carbohydrates=333")
+        let url = URL(string: "http://iwanttoeat.ddns.net:8080/menu?calories=3000&proteins=100&fats=100&carbohydrates=100")
         
         URLSession.shared.dataTask(with: url!) { (data,respons,error) in
             
@@ -54,7 +54,7 @@ class RationViewController: UIViewController, UITableViewDelegate, UITableViewDa
             return self.menu!.foodIntakeList.count
         }
     }
-   
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         
@@ -70,16 +70,21 @@ class RationViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showFoodIntake", sender: self)
+        if(menu != nil){
+            performSegue(withIdentifier: "showFoodIntake", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? FoodIntakeViewController{
-            destination.foodIntake = menu!.foodIntakeList[(foodIntakeTableView.indexPathForSelectedRow?.row)!]
+        if(menu != nil){
+            if let destination = segue.destination as? FoodIntakeViewController{
+                destination.foodIntake = menu!.foodIntakeList[(foodIntakeTableView.indexPathForSelectedRow?.row)!]
+            }
         }
     }
     /////////////////
 }
+
 
 
 
