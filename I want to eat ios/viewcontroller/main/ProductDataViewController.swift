@@ -21,32 +21,10 @@ class ProductDataViewController: UIViewController {
         super.viewDidLoad()
         let data = foodProduct!.product.data
         
-        
         calorieLabel.text =  data.calories.description
-        
-       // if(data.proteins != nil){
-            //  calorieLabel.text = Double(round(100*data.proteins!)/100).description
         proteinsLabel.text = data.proteins.description
-//        }else{
-//            proteinsLabel.text = "nil"
-//        }
-//
-        
-     //   if(data.carbohydrates != nil){
-            //carbohydratesLabel.text = Double(round(100*data.carbohydrates!)/100).description
         carbohydratesLabel.text = data.carbohydrates.description
-     //   }else{
-     //       carbohydratesLabel.text = "nil"
-     //   }
-        
-       // if(data.fats != nil){
-           // fatsLabel.text = Double(round(100*data.fats!)/100).description
         fatsLabel.text = data.fats.description
-     //   }else{
-      //      fatsLabel.text = "nil"
-      //  }
-        
-        
     }
     
     

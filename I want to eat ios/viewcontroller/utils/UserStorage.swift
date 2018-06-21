@@ -4,15 +4,16 @@ import Foundation
 
 class UserStorage {
     
-     static let genderKey = "gender"
-     static let ageKey = "age"
-     static let heightKey = "height"
-     static let weightKey = "weight"
-     static let activityKey = "activity"
-     static let targetWeightKey = "targetWeight"
+    static let genderKey = "gender"
+    static let ageKey = "age"
+    static let heightKey = "height"
+    static let weightKey = "weight"
+    static let activityKey = "activity"
+    static let targetWeightKey = "targetWeight"
     
+  //  static let menuForTheDayKey = "menuForTheDay"
     
-//    Gender
+    //    Gender
     public func fetchGender() -> String? {
         return UserDefaults.standard.string(forKey: UserStorage.genderKey)
     }
@@ -26,7 +27,7 @@ class UserStorage {
     }
     
     
-//    Age
+    //    Age
     public func fetchAge() -> String? {
         return UserDefaults.standard.string(forKey: UserStorage.ageKey)
     }
@@ -40,7 +41,7 @@ class UserStorage {
     }
     
     
-//    Height
+    //    Height
     public func fetchHeight() -> String? {
         return UserDefaults.standard.string(forKey: UserStorage.heightKey)
     }
@@ -52,9 +53,9 @@ class UserStorage {
     public func isHeightExist() -> Bool {
         return self.fetchHeight() != nil
     }
-
     
-//    Weight
+    
+    //    Weight
     public func fetchWeight() -> String? {
         return UserDefaults.standard.string(forKey: UserStorage.weightKey)
     }
@@ -68,7 +69,7 @@ class UserStorage {
     }
     
     
-//    Activity
+    //    Activity
     public func fetchActivity() -> String? {
         return UserDefaults.standard.string(forKey: UserStorage.activityKey)
     }
@@ -82,7 +83,7 @@ class UserStorage {
     }
     
     
-//    TargetWeight
+    //    TargetWeight
     public func fetchTargetWeight() -> String? {
         return UserDefaults.standard.string(forKey: UserStorage.targetWeightKey)
     }
@@ -94,5 +95,19 @@ class UserStorage {
     public func isTargetWeightExist() -> Bool {
         return self.fetchTargetWeight() != nil
     }
+    
+//    //    MenuForTheDay
+//    public func fetchMenuForTheDay() -> MenuForTheDay? {
+//        return UserDefaults.standard.object(forKey: UserStorage.menuForTheDayKey) as? MenuForTheDay
+//    }
+//
+//    public func saveMenuForTheDay(menuForTheDay: MenuForTheDay) {
+//        UserDefaults.standard.setValue(menuForTheDay as Any?, forKey: UserStorage.menuForTheDayKey)
+//    }
+//
+//    public func isMenuForTheDayExist() -> Bool {
+//        return self.fetchMenuForTheDay() != nil
+//    }
 }
+
 

@@ -12,26 +12,40 @@ class RationViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var foodIntakeTableView: UITableView!
     var menu:MenuForTheDay?
+    var storage = UserStorage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateMenu()
+    }
+    
+    
+    @IBAction func clickItemUpload(_ sender: Any) {
+        updateMenu()
+    }
+    
+    func updateMenu() {
         downloadJSON {
             print("Json Success!")
             self.foodIntakeTableView.reloadData()
-            
+            MenuStorage.SharedInstance().saveMenuForTheDay(menuForTheDay: self.menu)
         }
     }
     
     func downloadJSON(completed:@escaping ()->())  {
+        self.menu = nil
+        self.foodIntakeTableView.reloadData()
         
         let url = URL(string: "http://iwanttoeat.ddns.net:8080/menu?calories=3000&proteins=100&fats=100&carbohydrates=100")
         
         URLSession.shared.dataTask(with: url!) { (data,respons,error) in
+       
             
             if(error == nil){
                 do{
                     
                     self.menu = try JSONDecoder().decode(MenuForTheDay.self,from: data! )
+                    
                     DispatchQueue.main.async {
                         completed()
                     }
@@ -84,6 +98,7 @@ class RationViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     /////////////////
 }
+
 
 
 

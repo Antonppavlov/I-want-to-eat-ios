@@ -26,9 +26,11 @@ struct Food: Codable {
     let foodProducts: [FoodProduct]
 }
 
-struct FoodProduct: Codable {
+struct FoodProduct: Codable
+//, Equatable
+{
     let product: Product
-    let value: Double
+    let value: Int
 }
 
 struct Product: Codable {

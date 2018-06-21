@@ -15,6 +15,8 @@
 		1242370A20D0096000EFBA79 /* KeyboardCloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1242370920D0096000EFBA79 /* KeyboardCloseViewController.swift */; };
 		124C647F20D16253006CDAB8 /* RationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C647E20D16253006CDAB8 /* RationViewController.swift */; };
 		124C648120D1633A006CDAB8 /* MenuForTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C648020D1633A006CDAB8 /* MenuForTheDay.swift */; };
+		129CF3B520DBE81200CFDDB3 /* MenuStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129CF3B420DBE81200CFDDB3 /* MenuStorage.swift */; };
+		129CF3B720DBE9B700CFDDB3 /* ProductBasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129CF3B620DBE9B700CFDDB3 /* ProductBasketViewController.swift */; };
 		129F05D620BC992200C4F4CB /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129F05D520BC992200C4F4CB /* UserStorage.swift */; };
 		12A7E8E7205FF5AE00C698BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7E8E6205FF5AE00C698BB /* AppDelegate.swift */; };
 		12A7E8E9205FF5AE00C698BB /* StartViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7E8E8205FF5AE00C698BB /* StartViewContoller.swift */; };
@@ -39,6 +41,8 @@
 		1242370920D0096000EFBA79 /* KeyboardCloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCloseViewController.swift; sourceTree = "<group>"; };
 		124C647E20D16253006CDAB8 /* RationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RationViewController.swift; sourceTree = "<group>"; };
 		124C648020D1633A006CDAB8 /* MenuForTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuForTheDay.swift; sourceTree = "<group>"; };
+		129CF3B420DBE81200CFDDB3 /* MenuStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuStorage.swift; sourceTree = "<group>"; };
+		129CF3B620DBE9B700CFDDB3 /* ProductBasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBasketViewController.swift; sourceTree = "<group>"; };
 		129F05D520BC992200C4F4CB /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		12A7E8E3205FF5AE00C698BB /* I want to eat ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I want to eat ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12A7E8E6205FF5AE00C698BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 				12190C7D20D1AFC00039E34E /* FoodViewController.swift */,
 				12190C7F20D1BFB10039E34E /* ProductDataViewController.swift */,
 				124063C520AC0D9700C98E3E /* SettingsViewController.swift */,
+				129CF3B620DBE9B700CFDDB3 /* ProductBasketViewController.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 			children = (
 				129F05D520BC992200C4F4CB /* UserStorage.swift */,
 				124C648020D1633A006CDAB8 /* MenuForTheDay.swift */,
+				129CF3B420DBE81200CFDDB3 /* MenuStorage.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -178,6 +184,9 @@
 		12A7E8DB205FF5AE00C698BB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					"вфы",
+				);
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Anton Pavlov";
@@ -232,6 +241,8 @@
 				12A7E8E9205FF5AE00C698BB /* StartViewContoller.swift in Sources */,
 				12C4B5C72060086100C9D093 /* IndicateWeightViewController.swift in Sources */,
 				12C4B5C52060083E00C9D093 /* IndicateHeightViewController.swift in Sources */,
+				129CF3B720DBE9B700CFDDB3 /* ProductBasketViewController.swift in Sources */,
+				129CF3B520DBE81200CFDDB3 /* MenuStorage.swift in Sources */,
 				12190C8020D1BFB10039E34E /* ProductDataViewController.swift in Sources */,
 				12A7E8E7205FF5AE00C698BB /* AppDelegate.swift in Sources */,
 				129F05D620BC992200C4F4CB /* UserStorage.swift in Sources */,
