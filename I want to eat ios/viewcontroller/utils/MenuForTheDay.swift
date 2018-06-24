@@ -26,9 +26,11 @@ struct Food: Codable {
     let foodProducts: [FoodProduct]
 }
 
-struct FoodProduct: Codable
-//, Equatable
-{
+struct FoodProduct: Codable, Equatable{
+    static func == (lhs: FoodProduct, rhs: FoodProduct) -> Bool {
+        return lhs.product.name.nameRu == rhs.product.name.nameRu
+    }
+    
     let product: Product
     let value: Int
 }

@@ -18,20 +18,22 @@ class ProductBasketViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (getFoodProduct().count)
+        return (getProductNameAndValue().count)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: nil)
         
-        cell.textLabel?.text = getFoodProduct()[indexPath.row].product.name.nameRu.description.lowercased()
-        cell.detailTextLabel?.text = getFoodProduct()[indexPath.row].value.description
+        cell.textLabel?.text = getProductNameAndValue()[indexPath.row].name?.lowercased()
+        cell.detailTextLabel?.text = getProductNameAndValue()[indexPath.row].value?.description
         
         return cell
     }
     
-    func getFoodProduct() ->  [FoodProduct] {
-        var productList = [FoodProduct]()
+    
+    func getProductNameAndValue() ->  [ProductNameAndValue] {
+        
+        var productList = [ProductNameAndValue]()
         
         let foodIntakeList = MenuStorage.SharedInstance().fetchMenuForTheDay()?.foodIntakeList
         
@@ -43,22 +45,48 @@ class ProductBasketViewController: UIViewController, UITableViewDelegate, UITabl
                 let products = food.foodProducts
                 
                 for product in products{
-                    productList.append(product)
+                    let productNameAndValue = ProductNameAndValue()
+                    
+                    productNameAndValue.name = product.product.name.nameRu
+                    productNameAndValue.value = product.value
+                    
+                    let contains =  productList.contains(where: { (elementInList) -> Bool in
+                        
+                        if(elementInList == productNameAndValue){
+                            elementInList.value = elementInList.value! + productNameAndValue.value!
+                            return true;
+                        }else{
+                            return false;
+                        }
+                        
+                    })
+                    
+                    if(!contains){
+                        productList.append(productNameAndValue)
+                    }
+                    
                     
                 }
                 
             }
         }
-        return productList
+        return productList.sorted(by: { (product1, product2) -> Bool in
+            product1.value! > product2.value!
+        })
     }
-    
 }
 
-class ProductNameAndValue {
+class ProductNameAndValue : Equatable{
+    static func == (lhs: ProductNameAndValue, rhs: ProductNameAndValue) -> Bool {
+        return lhs.name == rhs.name
+    }
     public var name:String? = nil
     public var value:Int? = nil
-    
 }
+
+
+
+
 
 
 
