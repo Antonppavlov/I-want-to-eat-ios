@@ -113,6 +113,7 @@
 		12A7E8E5205FF5AE00C698BB /* I want to eat ios */ = {
 			isa = PBXGroup;
 			children = (
+				129F05D020BC943000C4F4CB /* utils */,
 				12C4B5BF205FFB1700C9D093 /* viewcontroller */,
 				12C4B5CD20600C3E00C9D093 /* storyboard */,
 				12A7E8E6205FF5AE00C698BB /* AppDelegate.swift */,
@@ -125,7 +126,6 @@
 		12C4B5BF205FFB1700C9D093 /* viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
-				129F05D020BC943000C4F4CB /* utils */,
 				124063C420AC0D8300C98E3E /* main */,
 				12C4B5CC20600BDE00C9D093 /* start */,
 				1242370920D0096000EFBA79 /* KeyboardCloseViewController.swift */,
